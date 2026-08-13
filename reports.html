@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BCCL Reports Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>BCCL</h2>
+            <p>Employee Portal</p>
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="employees.html">
+                    <i class="fas fa-users"></i>
+                    Employees
+                </a>
+            </li>
+
+            <li>
+                <a href="attendance.html">
+                    <i class="fas fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+            <li>
+                <a href="salary.html">
+                    <i class="fas fa-wallet"></i>
+                    Salary
+                </a>
+            </li>
+
+            <li>
+                <a href="department.html">
+                    <i class="fas fa-building"></i>
+                    Departments
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="reports.html">
+                    <i class="fas fa-chart-line"></i>
+                    Reports
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>Reports Dashboard</h1>
+                <p>Analytics & Performance Overview</p>
+            </div>
+
+            <div class="header-right">
+
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">2</span>
+                </div>
+
+                <div class="date" id="currentDate"></div>
+
+                <div class="profile">
+                    <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="Admin">
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Report Cards -->
+        <section class="cards">
+
+            <div class="card">
+                <i class="fas fa-chart-pie"></i>
+                <h2>87%</h2>
+                <p>Overall Productivity</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-file-alt"></i>
+                <h2>1,245</h2>
+                <p>Total Reports Generated</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-triangle-exclamation"></i>
+                <h2>18</h2>
+                <p>Pending Issues</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-check-circle"></i>
+                <h2>96%</h2>
+                <p>Report Accuracy</p>
+            </div>
+
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="actions">
+
+            <button>
+                <i class="fas fa-file-export"></i>
+                Generate Report
+            </button>
+
+            <button>
+                <i class="fas fa-download"></i>
+                Download PDF
+            </button>
+
+            <button>
+                <i class="fas fa-filter"></i>
+                Filter Reports
+            </button>
+
+            <button>
+                <i class="fas fa-chart-line"></i>
+                Analytics
+            </button>
+
+        </section>
+
+        <!-- Report Table -->
+        <section class="table-section">
+
+            <div class="table-header">
+
+                <div>
+                    <h2>Recent Reports</h2>
+                    <p>Latest generated system reports</p>
+                </div>
+
+                <div class="table-controls">
+
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search Reports...">
+                    </div>
+
+                    <select class="filter">
+                        <option>All Types</option>
+                        <option>Attendance</option>
+                        <option>Salary</option>
+                        <option>Performance</option>
+                        <option>Department</option>
+                    </select>
+
+                    <button class="add-btn">
+                        <i class="fas fa-plus"></i>
+                        New Report
+                    </button>
+
+                </div>
+
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Report ID</th>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>RPT001</td>
+                        <td>Monthly Attendance Report</td>
+                        <td>Attendance</td>
+                        <td>01 Jul 2026</td>
+                        <td><span class="present">Completed</span></td>
+                        <td>
+                            <button class="view-btn"><i class="fas fa-eye"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>RPT002</td>
+                        <td>Salary Distribution Report</td>
+                        <td>Salary</td>
+                        <td>28 Jun 2026</td>
+                        <td><span class="present">Completed</span></td>
+                        <td>
+                            <button class="view-btn"><i class="fas fa-eye"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>RPT003</td>
+                        <td>HR Performance Report</td>
+                        <td>Performance</td>
+                        <td>27 Jun 2026</td>
+                        <td><span class="absent">Pending</span></td>
+                        <td>
+                            <button class="view-btn"><i class="fas fa-eye"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>RPT004</td>
+                        <td>Department Analysis</td>
+                        <td>Department</td>
+                        <td>25 Jun 2026</td>
+                        <td><span class="present">Completed</span></td>
+                        <td>
+                            <button class="view-btn"><i class="fas fa-eye"></i></button>
+                            <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+/* ===========================
+   BCCL DASHBOARD MAIN STYLE
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+    width:260px;
+    background:#0f172a;
+    color:#fff;
+    padding:20px;
+}
+
+.logo h2{
+    font-size:26px;
+    color:#38bdf8;
+    letter-spacing:2px;
+}
+
+.logo p{
+    font-size:12px;
+    color:#94a3b8;
+}
+
+.menu{
+    margin-top:30px;
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:10px;
+}
+
+.menu li a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px;
+    color:#cbd5e1;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.menu li a:hover{
+    background:#1e293b;
+    color:#fff;
+}
+
+.menu li.active a{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+.main{
+    flex:1;
+    padding:20px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:15px 20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header h1{
+    font-size:22px;
+    color:#111827;
+}
+
+.header p{
+    font-size:13px;
+    color:#6b7280;
+}
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.notification{
+    position:relative;
+    font-size:18px;
+}
+
+.badge{
+    position:absolute;
+    top:-6px;
+    right:-8px;
+    background:red;
+    color:#fff;
+    font-size:10px;
+    padding:2px 5px;
+    border-radius:50%;
+}
+
+.profile img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    text-decoration:none;
+    color:#111;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card i{
+    font-size:22px;
+    margin-bottom:10px;
+    color:#2563eb;
+}
+
+.card h2{
+    font-size:22px;
+}
+
+.card p{
+    font-size:13px;
+    color:#6b7280;
+}
+
+/* ===========================
+   ACTIONS
+=========================== */
+
+.actions{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.actions button{
+    padding:10px 15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#2563eb;
+    color:#fff;
+    display:flex;
+    gap:8px;
+    align-items:center;
+    transition:0.3s;
+}
+
+.actions button:hover{
+    background:#1d4ed8;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.table-section{
+    margin-top:20px;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.table-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.table-header h2{
+    font-size:18px;
+}
+
+.table-header p{
+    font-size:12px;
+    color:#6b7280;
+}
+
+.table-controls{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.search-box{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    background:#f3f4f6;
+    padding:8px 10px;
+    border-radius:8px;
+}
+
+.search-box input{
+    border:none;
+    outline:none;
+    background:transparent;
+}
+
+.filter{
+    padding:8px;
+    border-radius:8px;
+    border:1px solid #ddd;
+}
+
+.add-btn, .export-btn{
+    padding:8px 12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#10b981;
+    color:#fff;
+}
+
+.export-btn{
+    background:#f59e0b;
+}
+
+/* ===========================
+   TABLE DESIGN
+=========================== */
+
+table{
+    width:100%;
+    margin-top:15px;
+    border-collapse:collapse;
+}
+
+table th, table td{
+    padding:12px;
+    text-align:left;
+    border-bottom:1px solid #eee;
+}
+
+.emp-img{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+}
+
+/* ===========================
+   STATUS TAGS
+=========================== */
+
+.present{
+    background:#dcfce7;
+    color:#15803d;
+    padding:4px 8px;
+    border-radius:6px;
+    font-size:12px;
+}
+
+.absent{
+    background:#fee2e2;
+    color:#dc2626;
+    padding:4px 8px;
+    border-radius:6px;
+    font-size:12px;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.view-btn,
+.edit-btn,
+.delete-btn{
+    border:none;
+    padding:6px 8px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.view-btn{ background:#3b82f6; color:#fff; }
+.edit-btn{ background:#f59e0b; color:#fff; }
+.delete-btn{ background:#ef4444; color:#fff; }
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .sidebar{
+        width:200px;
+    }
+}
+
+@media(max-width:600px){
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .sidebar{
+        display:none;
+    }
+}

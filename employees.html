@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCCL Employees</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="employees.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>BCCL</h2>
+            <p>Employee Portal</p>
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="employees.html">
+                    <i class="fas fa-users"></i>
+                    Employees
+                </a>
+            </li>
+
+            <li>
+                <a href="attendance.html">
+                    <i class="fas fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+            <li>
+                <a href="salary.html">
+                    <i class="fas fa-wallet"></i>
+                    Salary
+                </a>
+            </li>
+
+            <li>
+                <a href="department.html">
+                    <i class="fas fa-building"></i>
+                    Departments
+                </a>
+            </li>
+
+            <li>
+                <a href="reports.html">
+                    <i class="fas fa-chart-line"></i>
+                    Reports
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <div>
+                <h1>Employee Management</h1>
+                <p>Manage all BCCL Employees</p>
+            </div>
+
+            <div class="header-right">
+
+                <div class="notification">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">5</span>
+                </div>
+
+                <div class="date" id="currentDate"></div>
+
+                <div class="profile">
+                    <img src="https://randomuser.me/api/portraits/men/34.jpg">
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Statistics -->
+
+        <section class="cards">
+
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h2>31,250</h2>
+                <p>Total Employees</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-user-tie"></i>
+                <h2>5</h2>
+                <p>Departments</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-user-check"></i>
+                <h2>28,970</h2>
+                <p>Active Employees</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-user-plus"></i>
+                <h2>42</h2>
+                <p>New This Month</p>
+            </div>
+
+        </section>
+
+        <!-- Employee Controls -->
+
+        <section class="table-section">
+
+            <div class="table-header">
+
+                <div>
+                    <h2>Employee Directory</h2>
+                    <p>Search, Edit & Manage Employees</p>
+                </div>
+
+                <div class="table-controls">
+
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text"
+                            placeholder="Search Employee...">
+                    </div>
+
+                    <select class="filter">
+                        <option>All Departments</option>
+                        <option>Mining</option>
+                        <option>Finance</option>
+                        <option>HR</option>
+                        <option>Safety</option>
+                        <option>IT</option>
+                    </select>
+
+                    <button class="add-btn">
+                        <i class="fas fa-user-plus"></i>
+                        Add Employee
+                    </button>
+
+                    <button class="export-btn">
+                        <i class="fas fa-download"></i>
+                        Export Excel
+                    </button>
+
+                </div>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Photo</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Department</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <img src="https://i.pravatar.cc/45?img=10"
+                                class="emp-img">
+                        </td>
+
+                        <td>EMP001</td>
+
+                        <td>Rahul Kumar</td>
+
+                        <td>Mining Engineer</td>
+
+                        <td>Mining</td>
+
+                        <td>9876543210</td>
+
+                        <td>
+                            <span class="present">Active</span>
+                        </td>
+
+                        <td>
+
+                            <button class="view-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                            <button class="edit-btn">
+                                <i class="fas fa-edit"></i>
+                            </button>
+
+                            <button class="delete-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><img src="https://i.pravatar.cc/45?img=20"
+                                class="emp-img"></td>
+
+                        <td>EMP002</td>
+
+                        <td>Priya Sharma</td>
+
+                        <td>Finance Officer</td>
+
+                        <td>Finance</td>
+
+                        <td>9876543201</td>
+
+                        <td>
+                            <span class="present">Active</span>
+                        </td>
+
+                        <td>
+
+                            <button class="view-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                            <button class="edit-btn">
+                                <i class="fas fa-edit"></i>
+                            </button>
+
+                            <button class="delete-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><img src="https://i.pravatar.cc/45?img=5"
+                                class="emp-img"></td>
+
+                        <td>EMP003</td>
+
+                        <td>Aman Singh</td>
+
+                        <td>HR Manager</td>
+
+                        <td>HR</td>
+
+                        <td>9876543202</td>
+
+                        <td>
+                            <span class="absent">Inactive</span>
+                        </td>
+
+                        <td>
+
+                            <button class="view-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                            <button class="edit-btn">
+                                <i class="fas fa-edit"></i>
+                            </button>
+
+                            <button class="delete-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><img src="https://i.pravatar.cc/45?img=35"
+                                class="emp-img"></td>
+
+                        <td>EMP004</td>
+
+                        <td>Sneha Gupta</td>
+
+                        <td>Software Engineer</td>
+
+                        <td>IT</td>
+
+                        <td>9876543203</td>
+
+                        <td>
+                            <span class="present">Active</span>
+                        </td>
+
+                        <td>
+
+                            <button class="view-btn">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                            <button class="edit-btn">
+                                <i class="fas fa-edit"></i>
+                            </button>
+
+                            <button class="delete-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Bottom Statistics -->
+
+        <section class="cards">
+
+            <a href="leave.html" class="card">
+
+    <i class="fas fa-user-clock"></i>
+
+    <h2>125</h2>
+
+    <p>On Leave</p>
+
+</a>
+
+            <div class="card">
+                <i class="fas fa-user-shield"></i>
+                <h2>520</h2>
+                <p>Safety Staff</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-user-graduate"></i>
+                <h2>86</h2>
+                <p>Trainees</p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-award"></i>
+                <h2>98%</h2>
+                <p>Performance</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
